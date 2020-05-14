@@ -1,0 +1,15 @@
+car,0
+van,1
+truck,2
+bus,3
+others,4
+airliner,5
+stair_truck,6
+pushback_truck,7
+lang_vehicle,8
+propeller_aircraft,9
+charted_aircraft,10
+helicopter,11
+trainer_aircraft,12
+boat,13
+fighter_aircraft,14

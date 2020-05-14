@@ -1,0 +1,40 @@
+{
+    "model" : {
+        "min_input_size":       256,
+        "max_input_size":       256,
+        "anchors":              [16,21, 20,45, 26,75, 33,28, 39,49, 61,33, 67,83, 103,150, 212,274],
+        "labels":               ["airliner", "boat", "bus", "car", "chartered", "fighter", "helicopter", "longvehicle", "other", "propeller", "pushbacktruck", "stairtruck", "trainer", "truck", "van"]
+    },
+
+    "train": {
+        "train_image_folder":   "/content/drive/My Drive/SIMS/annotations/pascal_voc/JPEGImages/",
+        "train_annot_folder":   "/content/drive/My Drive/SIMS/annotations/pascal_voc/Annotations/",
+        "cache_name":           "yolo3.pkl",
+
+        "train_times":          8,
+        "batch_size":           3,
+        "learning_rate":        1e-4,
+        "nb_epochs":            70,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "/content/drive/My Drive/SIMS/Yolo3Cache/logs/",
+        "saved_weights_name":   "/content/drive/My Drive/SIMS/Yolo3Cache/weights/yolo3.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "/content/drive/My Drive/SIMS/Yolo3Cache/validation/images/",
+        "valid_annot_folder":   "/content/drive/My Drive/SIMS/Yolo3Cache/validation/annots/",
+        
+        "cache_name":           "yolo3.pkl",
+        "valid_times":          1
+    }
+}

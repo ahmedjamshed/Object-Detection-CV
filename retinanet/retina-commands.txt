@@ -1,0 +1,6 @@
+retinanet-convert-model C:\Users\saad\simd\keras-retinanet\snapshots\resnet50_csv_40.h5 C:\Users\saad\simd\keras-retinanet\converted_model\out.h5
+
+retinanet-evaluate csv test_data_ratina.csv classes.csv C:\Users\saad\simd\keras-retinanet\converted_model\out.h5
+
+
+retinanet-train --freeze-backbone --backbone resnet50 --no-resize --compute-val-loss --random-transform --weights C:\Users\saad\simd\keras-retinanet/weights/resnet50_coco_best_v2.h5 --batch-size 8 --steps 100 --epochs 100 --multiprocessing --compute-val-loss --weighted-average --snapshot-path C:\Users\saad\simd\keras-retinanet/snapshots csv annotations.csv classes.csv
