@@ -1,0 +1,5 @@
+  
+CVSeg/
+cache/
+.vscode/
+*.pyc
