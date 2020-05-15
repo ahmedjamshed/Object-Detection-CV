@@ -35,6 +35,23 @@ Training and Testing
 For training and testing run following jupyter notebook file
 Yollo3.ipynb
 Run the cells respectively and change the paths
+
+airliner: 0.9658
+boat: 0.9431
+bus: 0.9121
+car: 0.9250
+chartered: 0.9646
+fighter: 0.9527
+helicopter: 0.9530
+longvehicle: 0.8417
+other: 0.5184
+propeller: 0.8446
+pushbacktruck: 0.5987
+stairtruck: 0.7534
+trainer: 0.9501
+truck: 0.8374
+van: 0.7997
+mAP: 0.8507
 ```
 ## Retinanet
 ```
