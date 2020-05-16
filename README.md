@@ -10,6 +10,10 @@ Faster-RCNN : https://github.com/RockyXu66/Faster_RCNN_for_Open_Images_Dataset_K
 
 -----------------------------------------------------
 
+All configurations and datasets are provided here
+
+https://drive.google.com/drive/folders/1q64pmfB2CuSUYRcdwuGXE8zuH0YRMQpZ?usp=sharing
+
 ## Faster - RCNN
 ```
 Dataset  consist of images of folder and train, test csv file which contain information in the following format 
