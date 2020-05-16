@@ -1,5 +1,90 @@
-# Object-Detection-Deep-learning
-## Acknowledgment
+# Object-Detection-CV
+
+This repository compares the performances of different CNN's on Satellite Imagery DataSet SIMD. Models compared were
+
+* [YOLOV3](https://github.com/experiencor/keras-yolo3) - You only look once
+* [RetinaNet](https://github.com/fizyr/keras-retinanet) - Focal loss (resnet50 backbone)
+* [FasterRcnn](https://github.com/RockyXu66/Faster_RCNN_for_Open_Images_Dataset_Keras) - RPN with detector (vgg backbone)
+
+
+
+## About Dataset
+
+Satellite Imagery Multi-vehicles Dataset (SIMD). It comprises 5,000 images of resolution 1024 x 768 and collectively contains 45,303 objects in 15 different classes of vehicles including cars, trucks, buses, long vehicles, various types of aircrafts and boats. The source images are taken from public satellite imagery available in Google Earth and contain images of multiple locations from seven countries.
+
+Datasets and Data formats used in this repository, along with the trained weights and results can be found here.
+
+[DataSet](https://drive.google.com/drive/folders/1q64pmfB2CuSUYRcdwuGXE8zuH0YRMQpZ?usp=sharing) - Google Drive Link
+
+## Yolo3
+
+**Dataset Details**
+dataset must be in the form of pascal voc format containg proper XML annotaions.
+
+**Trainig and Testing**
+
+Use [yolo3/yolo3.ipynb](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/yolo3/yolo3.ipynb) to train and evaluate the newtwork. Make sure to change the paths if you are not using given dataset structure.
+
+**Results**
+
+Results obtained from YOLO3 are quite impressive
+
+```
+airliner: 0.9895
+boat: 0.9549
+bus: 0.9430
+car: 0.9446
+chartered: 0.9811
+fighter: 0.9849
+helicopter: 0.9898
+longvehicle: 0.9173
+other: 0.6810
+propeller: 0.9125
+pushbacktruck: 0.8040
+stairtruck: 0.8589
+trainer: 0.9724
+truck: 0.9100
+van: 0.9100
+mAP: 0.9169
+```
+## Faster - RCNN
+
+**Dataset Details**
+* train.txt - format: filename,x1,y1,x2,y2,calss_id,class_name
+* test.txt - format: filename,x1,y1,x2,y2,calss_id,class_name
+
+**Training**
+Use "fasterRcnn/frcnn_train_vgg.ipynb" to train the newtwork 
+
+**Testing**
+Use "fasterRcnn/frcnn_test_vgg.ipynb" to test the trained newtwork
+
+
+## Retinanet
+
+```
+**Dataset Details**
+* classes.csv - format: class_name,class_id
+* train.csv - format: filename,x1,y1,x2,y2,class_name
+* test.csv - format: filename,x1,y1,x2,y2,class_name
+
+**BackBone cnn**
+Resnet50 is used as backbone
+
+**Loss function**
+Wieghted-average
+
+**Trainig and Testing**
+Use "retinaNet/retinanet.ipynb"
+
+```
+
+## Authors
+
+**Ahmed Jamshed**
+
+## Acknowledgments
+
 This repo contains code from several github repos - Thankx to them :)
 
 retinanet : https://github.com/fizyr/keras-retinanet
@@ -7,68 +92,3 @@ retinanet : https://github.com/fizyr/keras-retinanet
 yolo : https://github.com/experiencor/keras-yolo3
 
 Faster-RCNN : https://github.com/RockyXu66/Faster_RCNN_for_Open_Images_Dataset_Keras
-
------------------------------------------------------
-
-All configurations and datasets are provided here
-
-https://drive.google.com/drive/folders/1q64pmfB2CuSUYRcdwuGXE8zuH0YRMQpZ?usp=sharing
-
-## Faster - RCNN
-```
-Dataset  consist of images of folder and train, test csv file which contain information in the following format 
-filename,x1,y1,x2,y2,class_name
-
-```
-```
-Training and Testing
-For training and testing run following jupyter notebook files
-frcnn_train_vgg.ipynb
-frcnn_test_vgg.ipynb
-Change the folder paths and run all the cells
-```
-
-## Yolo3
-```
-Dataset must be in the form of PASCL VOC dataset
-
-```
-```
-Training and Testing
-
-For training and testing run following jupyter notebook file
-Yollo3.ipynb
-Run the cells respectively and change the paths
-
-airliner: 0.9658
-boat: 0.9431
-bus: 0.9121
-car: 0.9250
-chartered: 0.9646
-fighter: 0.9527
-helicopter: 0.9530
-longvehicle: 0.8417
-other: 0.5184
-propeller: 0.8446
-pushbacktruck: 0.5987
-stairtruck: 0.7534
-trainer: 0.9501
-truck: 0.8374
-van: 0.7997
-mAP: 0.8507
-```
-## Retinanet
-```
-Dataset must be in the form of PASCL VOC dataset
-
-```
-```
-Training and Testing
-
-Command for training - change the paths
-retinanet-train --freeze-backbone --backbone resnet50 --no-resize --compute-val-loss --random-transform --weights C:\Users\saad\simd\keras-retinanet/weights/resnet50_coco_best_v2.h5 --batch-size 8 --steps 100 --epochs 100 --multiprocessing --compute-val-loss --weighted-average --snapshot-path C:\Users\saad\simd\keras-retinanet/snapshots csv annotations.csv classes.csv
-
-Commands for testing - change the paths
-retinanet-convert-model C:\Users\saad\simd\keras-retinanet\snapshots\resnet50_csv_40.h5 C:\Users\saad\simd\keras-retinanet\converted_model\out.h5
-retinanet-evaluate csv test_data_ratina.csv classes.csv C:\Users\saad\simd\keras-retinanet\converted_model\out.h5
-```
