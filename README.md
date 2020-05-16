@@ -16,6 +16,8 @@ Datasets and Data formats used in this repository, along with the trained weight
 
 [DataSet](https://drive.google.com/drive/folders/1q64pmfB2CuSUYRcdwuGXE8zuH0YRMQpZ?usp=sharing) - Google Drive Link
 
+**Make sure to change the paths in the mentioned notebook files if you are not using given dataset structure.**
+
 ## Yolo3
 
 **Dataset Details**
@@ -23,7 +25,7 @@ dataset must be in the form of pascal voc format containg proper XML annotaions.
 
 **Trainig and Testing**
 
-Use [yolo3/yolo3.ipynb](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/yolo3/yolo3.ipynb) to train and evaluate the newtwork. Make sure to change the paths if you are not using given dataset structure.
+Use ["yolo3/yolo3.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/yolo3/yolo3.ipynb) to train and evaluate the newtwork. Make sure to change the paths if you are not using given dataset structure.
 
 **Results**
 
@@ -54,15 +56,15 @@ mAP: 0.9169
 * test.txt - format: filename,x1,y1,x2,y2,calss_id,class_name
 
 **Training**
-Use "fasterRcnn/frcnn_train_vgg.ipynb" to train the newtwork 
+Use  ["fasterRcnn/frcnn_train_vgg.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/frcnn_train_vgg.ipynb) to train the newtwork 
 
 **Testing**
-Use "fasterRcnn/frcnn_test_vgg.ipynb" to test the trained newtwork
+Use  ["fasterRcnn/frcnn_test_vgg.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/frcnn_test_vgg.ipynb) to evaluate the trained newtwork.
 
 
 ## Retinanet
 
-```
+
 **Dataset Details**
 * classes.csv - format: class_name,class_id
 * train.csv - format: filename,x1,y1,x2,y2,class_name
@@ -75,13 +77,12 @@ Resnet50 is used as backbone
 Wieghted-average
 
 **Trainig and Testing**
-Use "retinaNet/retinanet.ipynb"
+Use  ["retinaNet/retinanet.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/retinaNet/retinanet.ipynb) to train and evaluate the trained newtwork.
 
-```
 
 ## Authors
 
-**Ahmed Jamshed**
+* **Ahmed Jamshed**
 
 ## Acknowledgments
 
