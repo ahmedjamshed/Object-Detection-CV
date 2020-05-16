@@ -20,8 +20,27 @@ Datasets and Data formats used in this repository, along with the trained weight
 
 ## Yolo3
 
+**Anchors optimization**
+
+Anchors optimization is the key to improve the performance of any object detection CNN. In order to optimize the anchros for the given dataset,  
+
+````
+python gen_anchors.py -c path/to/config.json
+````
+and paste it's output in the same config.json. Anchors for the given dataset are
+
+````
+"model" : {
+        "min_input_size":       256,
+        "max_input_size":       256,
+        "anchors":              [16,21, 20,45, 26,75, 33,28, 39,49, 61,33, 67,83, 103,150, 212,274],
+        "labels":               ["airliner", "boat", "bus", "car", "chartered", "fighter", "helicopter", "longvehicle",                                    "other", "propeller", "pushbacktruck", "stairtruck", "trainer", "truck", "van"]
+      },
+````
+
 **Dataset Details**
-dataset must be in the form of pascal voc format containg proper XML annotaions.
+
+Dataset must be in the form of pascal voc format containg proper XML annotaions.
 
 **Trainig and Testing**
 
