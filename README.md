@@ -76,11 +76,15 @@ mAP: 0.9169
 * test.txt - format: filename,x1,y1,x2,y2,calss_id,class_name
 
 **Training**
-Use  ["fasterRcnn/frcnn_train_vgg.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/frcnn_train_vgg.ipynb) to train the newtwork 
+Use  ["fasterRcnn/frcnn_train_vgg.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/frcnn_train_vgg.ipynb) to train the newtwork
+
+ <img src = "https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/results/class_acc_mop.png" height ="155" /> <img src = "https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/results/class_reg.png" height ="155" />
+<img src = "https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/results/rpn.png" height ="155" /> <img src = "https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/results/total_loss.png" height ="155" />
 
 **Testing**
 Use  ["fasterRcnn/frcnn_test_vgg.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/frcnn_test_vgg.ipynb) to evaluate the trained newtwork.
 
+<img src = "https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/results/boats.png" width ="400" /> <img src = "https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/fasterRcnn/results/car.png" width ="400" />
 
 ## Retinanet
 
