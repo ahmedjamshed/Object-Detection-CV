@@ -71,6 +71,19 @@ mAP: 0.9169
 
 ## Faster - RCNN
 
+**Anchors optimization**
+
+Anchors optimization is the key to improve the performance of any object detection CNN. Anchors settings used for the given dataset are
+
+````
+# Original anchor_box_scales in the paper is [128, 256, 512]
+self.anchor_box_scales = [32, 64, 128, 256, 512] # results were not good at [64, 128, 256]
+
+# Anchor box ratios
+self.anchor_box_ratios = [[1, 1], [1./math.sqrt(2), 2./math.sqrt(2)], [2./math.sqrt(2), 1./math.sqrt(2)]]
+
+````
+
 **Dataset Details**
 * train.txt - format: filename,x1,y1,x2,y2,calss_id,class_name
 * test.txt - format: filename,x1,y1,x2,y2,calss_id,class_name
@@ -88,6 +101,23 @@ Use  ["fasterRcnn/frcnn_test_vgg.ipynb"](https://github.com/ahmedjamshed/Object-
 
 ## Retinanet
 
+**Anchors optimization**
+
+Anchors optimization is the key to improve the performance of any object detection CNN. Anchors settings used for the given dataset are
+
+````
+
+[anchor_parameters]
+# Sizes should correlate to how the network processes an image
+sizes   = 16 32 64 128 256
+# Strides should correlate to how the network strides over an image
+strides = 8 16 32 64 128
+# The different ratios to use per anchor location.
+ratios  = 0.5 1 2 3
+# The different scaling factors to use per anchor location.
+scales  = 1 1.2 1.6
+
+````
 
 **Dataset Details**
 * classes.csv - format: class_name,class_id
