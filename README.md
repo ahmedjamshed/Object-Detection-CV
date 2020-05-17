@@ -102,6 +102,31 @@ Wieghted-average
 **Trainig and Testing**
 Use  ["retinaNet/retinanet.ipynb"](https://github.com/ahmedjamshed/Object-Detection-CV/blob/master/retinaNet/retinanet.ipynb) to train and evaluate the trained newtwork.
 
+**Results**
+
+Results obtained from retina net were
+
+````
+2113 instances of class car with average precision: 0.8946
+367 instances of class van with average precision: 0.7070
+105 instances of class truck with average precision: 0.3815
+96 instances of class bus with average precision: 0.5932
+22 instances of class others with average precision: 0.0886
+37 instances of class airliner with average precision: 0.7450
+40 instances of class stair_truck with average precision: 0.2819
+26 instances of class pushback_truck with average precision: 0.0350
+87 instances of class lang_vehicle with average precision: 0.2985
+1 instances of class propeller_aircraft with average precision: 0.0312
+36 instances of class charted_aircraft with average precision: 0.4861
+8 instances of class helicopter with average precision: 0.0115
+108 instances of class trainer_aircraft with average precision: 0.6296
+94 instances of class boat with average precision: 0.7173
+0 instances of class fighter_aircraft with average precision: 0.0000
+Inference time for 307 images: 0.0883
+mAP using the weighted average of precisions among classes: 0.7858
+mAP: 0.4215
+````
+
 
 ## Authors
 
