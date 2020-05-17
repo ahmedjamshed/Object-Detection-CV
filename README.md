@@ -77,7 +77,7 @@ Anchors optimization is the key to improve the performance of any object detecti
 
 ````
 # Original anchor_box_scales in the paper is [128, 256, 512]
-self.anchor_box_scales = [32, 64, 128, 256, 512] # results were not good at [64, 128, 256]
+self.anchor_box_scales = [16, 32, 64, 128, 256] # results were not good at [64, 128, 256]
 
 # Anchor box ratios
 self.anchor_box_ratios = [[1, 1], [1./math.sqrt(2), 2./math.sqrt(2)], [2./math.sqrt(2), 1./math.sqrt(2)]]
