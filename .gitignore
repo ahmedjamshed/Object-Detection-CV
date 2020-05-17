@@ -3,3 +3,4 @@ CVSeg/
 cache/
 .vscode/
 *.pyc
+temp.txt
