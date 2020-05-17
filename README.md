@@ -12,9 +12,6 @@ This repository compares the performances of different CNN's on Satellite Imager
 
 Satellite Imagery Multi-vehicles Dataset (SIMD). It comprises 5,000 images of resolution 1024 x 768 and collectively contains 45,303 objects in 15 different classes of vehicles including cars, trucks, buses, long vehicles, various types of aircrafts and boats. The source images are taken from public satellite imagery available in Google Earth and contain images of multiple locations from seven countries.
 
-Datasets and Data formats used in this repository, along with the trained weights and results can be found here.
-
-[DataSet](https://drive.google.com/drive/folders/1q64pmfB2CuSUYRcdwuGXE8zuH0YRMQpZ?usp=sharing) - Google Drive Link
 
 **Make sure to change the paths in the mentioned notebook files if you are not using given dataset structure.**
 
